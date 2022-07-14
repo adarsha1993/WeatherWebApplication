@@ -1,0 +1,21 @@
+@import './component/sass/Variable';
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+
+  padding: 40px;
+
+  line-height: 1.7;
+
+  background: radial-gradient(
+    rgba(39, 242, 232, 0.875) 50%,
+    rgba(231, 70, 252, 0.65) 100%
+  );
+}

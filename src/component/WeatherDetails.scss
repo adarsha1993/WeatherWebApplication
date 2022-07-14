@@ -1,0 +1,77 @@
+.weatherdetails {
+  // background-color: rgb(255, 64, 0);
+  background: transparent;
+  position: absolute;
+
+  top: 8%;
+  right: -3%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 300px;
+  padding: 5px;
+  gap: 50px;
+  flex-direction: column;
+
+  animation: moveInRight 5s ease-in-out;
+  backface-visibility: hidden;
+
+  &__items {
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+    color: rgb(208, 209, 221);
+  }
+  &__items--logo {
+    width: 35px;
+    height: 30px;
+  }
+
+  // &__items--detail {
+  // }
+}
+
+// left to right  negative value means it goes to the left
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-35px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@media (max-width: 1500px) {
+  .weatherdetails {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    margin-left: 2%;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+  }
+}
+
+.weather-text {
+  font-size: 15px;
+  font-weight: 700;
+  text-shadow: 0 0 62px #000000cc;
+}
+
+.weather-value {
+  font-size: 15px;
+  font-weight: 300;
+  // text-shadow: 0 0 62px #000000cc;
+}

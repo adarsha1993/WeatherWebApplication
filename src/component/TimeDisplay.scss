@@ -1,0 +1,92 @@
+@mixin time {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.timedisplay {
+  margin-top: -40px;
+  color: rgb(208, 209, 221);
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+
+  margin-left: -5%;
+
+  // background-color: red;
+
+  &__text {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 0 0 2px #000000cc;
+    position: relative;
+  }
+  &__time {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  &__temp {
+    font-size: 50px;
+    font-weight: 700;
+    text-shadow: 0 0 2px #000000cc;
+  }
+
+  &__description {
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+
+  &__icon {
+    width: 30px;
+    background-color: black;
+  }
+
+  &__sunrise,
+  &__sunset {
+    font-size: 20px;
+    font-weight: 300;
+  }
+}
+
+// logo or icon
+.weather_icon {
+  width: 80px;
+  height: 80px;
+}
+
+.riseset {
+  display: flex;
+  gap: 260px;
+  justify-content: space-evenly;
+  margin-top: -120px;
+
+  &__sunrise--time,
+  &__sunset--time {
+    font-size: 20px;
+    font-weight: 700;
+
+    text-shadow: 0 0 12px #0000006e;
+  }
+  &__sunrise--logo,
+  &__sunset--logo {
+    width: 35px;
+    height: 35px;
+    margin-left: 15px;
+  }
+
+  &__sunrise--text,
+  &__sunset--text {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 8px;
+  }
+}
+@media (max-width: 800px) {
+  .timedisplay {
+    margin-top: 5px;
+  }
+}

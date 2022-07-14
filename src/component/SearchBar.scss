@@ -1,0 +1,47 @@
+@import './sass/Variable';
+
+.search {
+  padding: 10px;
+  display: inline-block;
+  margin-top: 40px;
+
+  &__bar {
+    align-items: center;
+
+    padding: 20px;
+
+    display: flex;
+    background-color: transparent;
+    padding: 5px;
+    gap: 2px;
+  }
+  &__bar--input {
+    width: 220px;
+    height: 30px;
+
+    border-radius: 25px;
+    // border: solid black;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+  }
+  &__bar--icon {
+    width: 25px;
+  }
+
+  &__button {
+    border-color: solid rgb(238, 238, 238);
+    // padding: 1px;
+
+    border-radius: 10px;
+    width: auto;
+    height: 27px;
+    // background: transparent;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  &__button:hover,
+  &__button::after {
+    background-color: rgb(92, 202, 233);
+  }
+}

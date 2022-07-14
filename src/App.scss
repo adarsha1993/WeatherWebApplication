@@ -1,0 +1,144 @@
+@import './component/sass/Variable';
+
+$linear: linear-gradient(to right, #07010165, #01010145);
+.header {
+  background-image: url('./img/linus-nylund-JP23z_-dA74-unsplash.jpg');
+
+  @include image-style;
+  background-position: center;
+}
+.Clouds {
+  @include image-style;
+  background-image: $linear, url('./img/Clouds.jpg');
+  background-position: center;
+
+  animation: Clouds 3s ease-out;
+}
+
+.Rain {
+  @include image-style;
+  background-image: $linear, url('./img/Rain.jpg');
+  animation: Rain 3s ease-out;
+}
+
+.Thunderstorm {
+  @include image-style;
+  background-image: url('./img/Thunderstorm.jpg');
+  animation: Thunderstorm 3s ease-out;
+}
+
+.Clear {
+  @include image-style;
+  background-image: url('./img/Clear.jpg');
+
+  animation: Clear 3s ease-in-out;
+}
+.Dust {
+  @include image-style;
+  background-image: url('./img/Dust.jpg');
+  animation: Dust 3s ease-out;
+}
+
+@keyframes Clear {
+  0% {
+    background-image: $linear,
+      url('./img/ishan-seefromthesky-8qEuawM_txg-unsplash.jpg');
+    background-position: top;
+  }
+  100% {
+    background-image: url('./img/Clear.jpg');
+  }
+}
+
+@keyframes Clouds {
+  0% {
+    background-image: url('./img/ishan-seefromthesky-8qEuawM_txg-unsplash.jpg');
+    background-position: bottom;
+  }
+  100% {
+    background-image: $linear, url('./img/Clouds.jpg');
+  }
+}
+
+@keyframes Thunderstorm {
+  0% {
+    background-image: url('./img/ishan-seefromthesky-8qEuawM_txg-unsplash.jpg');
+    background-position: top;
+  }
+  100% {
+    background-image: url('./img/Thunderstorm.jpg');
+    @include image-style;
+  }
+}
+
+@keyframes Dust {
+  0% {
+    background-image: url('./img/ishan-seefromthesky-8qEuawM_txg-unsplash.jpg');
+    background-position: top;
+  }
+  100% {
+    background-image: url('./img/Dust.jpg');
+    @include image-style;
+  }
+}
+@keyframes Rain {
+  0% {
+    background-image: url('./img/ishan-seefromthesky-8qEuawM_txg-unsplash.jpg');
+    background-position: top;
+  }
+  100% {
+    background-image: $linear, url('./img/Rain.jpg');
+    @include image-style;
+  }
+}
+
+// @media (max-width: 500px) {
+//   .header,
+//   .Clouds,
+//   .Rain,
+//   .Thunderstorm,
+//   .Clear,
+//   .Dust {
+//     background-size: cover;
+//     height: fit-content;
+//     padding: 0px;
+//     width: 100%;
+
+//     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+//   }
+//   body {
+//     padding: 0px;
+//   }
+// }
+// @media (max-width: 1512px) {
+//   .header,
+//   .Clouds,
+//   .Rain,
+//   .Thunderstorm,
+//   .Clear,
+//   .Dust {
+//     background-size: cover;
+//     height: auto;
+
+//     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+//   }
+//   body {
+//     padding: 5px;
+//   }
+// }
+
+// @media (max-width: 1512px) {
+//   .header,
+//   .Clouds,
+//   .Rain,
+//   .Thunderstorm,
+//   .Clear,
+//   .Dust {
+//     @include image-style;
+
+//     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+//   }
+//   body {
+//     padding: 0px;
+//   }
+// }
